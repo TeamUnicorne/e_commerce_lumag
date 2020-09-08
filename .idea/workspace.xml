@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9011ffd5-94c0-474d-9b5c-88ff8575c2bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Loader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
     </list>
@@ -132,7 +133,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/CardProducts.vue</url>
           <line>32</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
