@@ -1,5 +1,8 @@
 <template>
-    <div id="app">
+    <div v-if="loading">
+      <Loader/>
+    </div>
+     <div v-else id="app">
     <Header/>
     <section class="slider">
       <img src="./assets/entreprise.jpg" alt="Ceci est une image">
@@ -57,20 +60,27 @@
 import CardProducts from './components/CardProducts'
 import Header from './components/Header'
 import {ApiReader} from './constants'
+import Loader from './components/Loader'
 const axios = require('axios');
 
 export default {
   name: 'App',
   components: {
+    Loader,
     Header,
 		CardProducts
   },
   data() {
     return {
-      products: null
+      products: null,
+      loading: false
     }
   },
+  beforeMount() {
+    this.loading = true
+  },
   mounted() {
+    this.loading = false
       axios
           .get(`${ApiReader.BASE_URL}${ApiReader.GET_ALL_PRODUCTS}?${ApiReader.CLIENT_KEY}&${ApiReader.SECRET_KEY}`)
           .then(response => (this.products = response.data))
@@ -87,7 +97,7 @@ html, body{
 body {
   width: 100%;
   min-height: 100vh;
-  font-family: 'Roboto';
+  font-family: 'Roboto',serif;
   font-weight: 400;
   font-size: .9rem;
   background-color: #F8F8F8;
