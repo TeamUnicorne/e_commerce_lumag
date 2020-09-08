@@ -5,7 +5,7 @@
 
         <div class="logo" id="logo">
           <a href="#">
-            <img src="#" alt="site logo">
+            <img src="../assets/logo.png" alt="site logo" width="64">
           </a>
         </div>
 

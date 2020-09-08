@@ -126,4 +126,16 @@
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680/200.-900.1600.860@0.0.1280.680" timestamp="1599485427986" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/CardProducts.vue</url>
+          <line>32</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
 </project>
