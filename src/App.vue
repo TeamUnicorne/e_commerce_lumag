@@ -1,14 +1,13 @@
 <template>
   <div id="app">
     <pre>{{ products[0] }}</pre>
-
-	<!--	<CardProducts name="{{products[].name}}" image="" price=""/>-->
+    <HelloWorld msg="Bienvenue chez Lumag! 😎"
 		<ul id="products-list">
 			<li class="product-card" v-for="(product, index) in products.slice(0, 4)" :key="index">
 				<CardProducts v-bind:image="product.images[0].src" v-bind:image_alt="product.image_alt"
 											v-bind:name="product.name"
 											v-bind:regular_price="product.regular_price"
-											v-bind:sale_price="product.sale_price"
+											v-bind:sale_price="product.sale_price"😎😎😎
 				></CardProducts>
 			</li>
 		</ul>
