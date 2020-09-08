@@ -2,7 +2,6 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App batard"/>
-    <p>{{ products }}</p>
   </div>
 </template>
 
@@ -25,7 +24,7 @@ export default {
   mounted() {
     axios
         .get(`${ApiReader.BASE_URL}${ApiReader.GET_ALL_PRODUCTS}?${ApiReader.CLIENT_KEY}&${ApiReader.SECRET_KEY}`)
-        .then(response => (this.products = response))
+        .then(response => (this.products = response.data))
   }
 }
 </script>
