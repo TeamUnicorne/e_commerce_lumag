@@ -56,6 +56,7 @@
 <script>
 import CardProducts from './components/CardProducts'
 import Header from './components/Header'
+import {ApiReader} from './Constants'
 const axios = require('axios');
 
 export default {
