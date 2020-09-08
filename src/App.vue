@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App batard"/>
+    <HelloWorld msg="Willkommen bei Lumag 😎"/>
+    <ul>
+      <li v-for="(product, index) in products" :key="index">{{product}}</li>
+    </ul>
   </div>
 </template>
 
