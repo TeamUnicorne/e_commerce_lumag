@@ -1,23 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Willkommen bei Lumag 😎"/>
-    <ul>
-      <li v-for="(product, index) in products" :key="index">{{product}}</li>
-    </ul>
-  </div>
+    <pre>{{ products[0] }}</pre>
+
+	<!--	<CardProducts name="{{products[].name}}" image="" price=""/>-->
+		<ul id="products-list">
+			<li class="product-card" v-for="(product, index) in products.slice(0, 4)" :key="index">
+				<CardProducts v-bind:image="product.images[0].src" v-bind:image_alt="product.image_alt"
+											v-bind:name="product.name"
+											v-bind:regular_price="product.regular_price"
+											v-bind:sale_price="product.sale_price"
+				></CardProducts>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import CardProducts from './components/CardProducts'
 const axios = require('axios');
-import {ApiReader} from './constants'
-
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+		CardProducts
   },
   data() {
     return {
@@ -26,7 +33,7 @@ export default {
   },
   mounted() {
     axios
-        .get(`${ApiReader.BASE_URL}${ApiReader.GET_ALL_PRODUCTS}?${ApiReader.CLIENT_KEY}&${ApiReader.SECRET_KEY}`)
+        .get("https://unick-orn-lumag.go.yj.fr/index.php/wp-json/wc/v3/products?consumer_key=ck_ae09e58398fd465b7d796fa9713b55b3061c9575&consumer_secret=cs_45bc57883d05452f4bb658450a0e7d517ab1af0d")
         .then(response => (this.products = response.data))
   }
 }
