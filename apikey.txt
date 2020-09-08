@@ -1,0 +1,7 @@
+wordpress planethoster ==>
+cle client : ck_ae09e58398fd465b7d796fa9713b55b3061c9575
+cle secret : cs_45bc57883d05452f4bb658450a0e7d517ab1af0d
+
+_______________________________________________________
+
+?consumer_key=ck_ck_ae09e58398fd465b7d796fa9713b55b3061c9575&consumer_secret=cs_45bc57883d05452f4bb658450a0e7d517ab1af0d
