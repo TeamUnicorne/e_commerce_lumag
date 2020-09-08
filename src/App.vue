@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+    <div id="app">
+    <Header/>
     <HelloWorld msg="Bienvenue chez Lumag! 😎"/>
     <pre>{{ products[0] }}</pre>
 		<ul id="products-list">
@@ -16,11 +17,13 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import CardProducts from './components/CardProducts'
+import Header from './components/Header'
 const axios = require('axios');
 
 export default {
   name: 'App',
   components: {
+    Header,
     HelloWorld,
 		CardProducts
   },
@@ -38,12 +41,32 @@ export default {
 </script>
 
 <style>
+html, body{
+  padding: 0;
+  margin:0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: .9rem;
+  background-color: #F8F8F8;
+  color: #151000;
+}
+
+ul{
+  padding: 0;
+}
+
+
+a{
+  list-style: none;
+  text-decoration: none;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
