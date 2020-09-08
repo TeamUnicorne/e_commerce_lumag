@@ -1,20 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App batard"/>
-  </div>
+    <HelloWorld msg="Bienvenue chez Lumag! 😎"/>
+    <pre>{{ products[0] }}</pre>
+		<ul id="products-list">
+			<li class="product-card" v-for="(product, index) in products.slice(0, 4)" :key="index">
+				<CardProducts v-bind:image="product.images[0].src" v-bind:image_alt="product.image_alt"
+											v-bind:name="product.name"
+											v-bind:regular_price="product.regular_price"
+											v-bind:sale_price="product.sale_price"/>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import CardProducts from './components/CardProducts'
 const axios = require('axios');
-import {ApiReader} from './constants'
-
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+		CardProducts
   },
   data() {
     return {
