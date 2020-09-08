@@ -30,14 +30,9 @@ export default {
     }
   },
   mounted() {
-    const fetchProducts = (async () => {
       axios
           .get(`${ApiReader.BASE_URL}${ApiReader.GET_ALL_PRODUCTS}?${ApiReader.CLIENT_KEY}&${ApiReader.SECRET_KEY}`)
           .then(response => (this.products = response.data))
-    })()
-    fetchProducts().await(() => {
-
-    })
   }
 }
 </script>
