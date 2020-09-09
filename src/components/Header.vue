@@ -82,6 +82,16 @@ export default {
   line-height: 50px;
   font-weight: 900;
 }
+
+.menu-bar .menu-left a:active {
+  color: #151000;
+  background-color: #FEBE21;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-weight: 900;
+
+}
+
 .menu-right{
   display: flex;
   flex-direction: row;
@@ -106,5 +116,14 @@ export default {
 
 #panier {
   font-size: 2rem;
+}
+
+.menu-bar .menu-right a:active {
+  color: #151000;
+  background-color: #FEBE21;
+  text-transform: uppercase;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 </style>

@@ -4,7 +4,8 @@
     <h3 class="product-name">{{ name }}</h3>
     <div class="product-price">{{regular_price}} €</div>
     <div v-if="sale_price" class="promo-price">{{sale_price}} €</div>
-    <button class="yellow-button">SÉLECTIONNER</button>
+    <button class="yellow-button"><router-link :to="'/produit/' + slug">SELECTIONNER</router-link></button>
+
   </div>
 </template>
 
@@ -16,6 +17,7 @@ name: "CardProducts",
 		image : String,
 		image_alt : String,
 		name : String,
+		slug : String,
 		sale_price : String,
 		regular_price : String
 	}
@@ -48,7 +50,7 @@ name: "CardProducts",
 
 .product-card{
     position: relative;
-    
+
 }
 
 .products-cards .product-card {
@@ -79,7 +81,7 @@ name: "CardProducts",
   position: absolute;
   bottom: -40px;
   left: 0;
-  
+
 }
 
 .yellow-button:hover{
@@ -101,6 +103,12 @@ name: "CardProducts",
     position: absolute;
   bottom: -40px;
   left: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
 }
 
 
