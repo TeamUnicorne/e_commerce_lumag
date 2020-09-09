@@ -26,7 +26,10 @@
 						<CardProducts v-bind:image="product.images[0].src" v-bind:image_alt="product.image_alt"
 													v-bind:name="product.name"
 													v-bind:regular_price="product.regular_price"
-													v-bind:sale_price="product.sale_price"/>
+													v-bind:sale_price="product.sale_price"
+													v-bind:slug="product.slug"
+
+						/>
 					</li>
 				</ul>
 			</div>
