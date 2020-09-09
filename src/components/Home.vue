@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <div class="footer">  </div>
+
   </div>
 
 </template>
@@ -373,9 +373,5 @@ li{
 }
 
 
-.footer{
-  height: 70px;
-  width: 100%;
-  background-color: #151000;
-}
+
 </style>
