@@ -5,7 +5,6 @@
     <div class="product-price">{{regular_price}} €</div>
     <div v-if="sale_price" class="promo-price">{{sale_price}} €</div>
     <router-link class="yellow-button" :to="'/produit/' + slug">SELECTIONNER</router-link>
-
   </div>
 </template>
 
