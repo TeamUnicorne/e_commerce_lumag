@@ -1,38 +1,38 @@
 <template>
-  <header class="site-header" id="site-header">
-    <div class="header-container">
-      <div class="navigation-bar">
-        <div class="top-bar">
-          <div class="logo" id="logo">
-            <a href="#">
-              <img src="../assets/logo-microtracteur.svg" alt="site logo" width="260">
-            </a>
-          </div>
-        </div>
+	<div id="header">
+		<header class="site-header" id="site-header">
+			<div class="header-container">
+				<div class="navigation-bar">
 
-        <div class="menu-bar">
-          <div class="menu-left">
-            <a href="#">Mini dumper</a>
+					<div class="logo" id="logo">
+						<a href="#">
+							<img src="../assets/logo.png" alt="site logo" width="64">
+						</a>
+					</div>
 
-            <a href="#">Construction</a>
+					<div class="menu-bar">
+						<div class="menu-left">
+							<a href="">Mini dumper</a>
+							<router-link to="/">Home</router-link>
+							<a href="#">Construction</a>
 
-            <a href="#">Entretien des terrains</a>
+							<a href="#">Entretien des terrains</a>
 
-            <a href="#">Pièces de rechange</a>
+							<a href="#">Pièces de rechange</a>
+						</div>
 
-            <a href="#">Contact</a>
-          </div>
+						<div class="menu-right">
+							<a href="#">identification</a>
 
-          <div class="menu-right">
-            <a href="#">identification</a>
+							<a href="#">Panier</a>
+						</div>
+					</div>
 
-            <a href="#">Panier</a>
-          </div>
-        </div>
+				</div>
+			</div> <!-- navigation bar -->
+		</header>
+	</div>
 
-      </div>
-    </div> <!-- navigation bar -->
-  </header>
 </template>
 
 <script>
@@ -45,7 +45,6 @@ export default {
 .navigation-bar{
   background-color: #FEBE21;
   overflow: hidden;
-
 }
 
 
