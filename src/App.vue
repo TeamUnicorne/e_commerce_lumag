@@ -40,21 +40,35 @@
           <h2>Dernières actus</h2>
         </div>
 
-        <div class="article-container">
-          <div class="blog-image"> <img src=""></div>
-
-          <div class="blog-title">
-            <h2>Lorem ipsum dolor </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id diam porta massa vulputate pharetra. Nullam id gravida mi. Donec ultrices risus a nunc rhoncus, in gravida lorem finibus. Vivamus ac sollicitudin ligula, a bibendum mi. Vivamus at nulla auctor, imperdiet leo in, imperdiet lacus. Morbi porta dapibus diam, id accumsan urna.</p>
+        <div class="articles-container">
+          <div class="article-container">
+            <div class="blog-image"> <img src="./assets/entreprise.jpg"></div>
+            <div class="blog-content">
+              <h3>Lorem ipsum dolor </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id diam porta massa vulputate pharetra. Nullam id gravida mi. Donec ultrices risus a nunc rhoncus, in gravida lorem finibus. Vivamus ac sollicitudin ligula, a bibendum mi. Vivamus at nulla auctor, imperdiet leo in, imperdiet lacus. Morbi porta dapibus diam, id accumsan urna.</p>
+              <button class="bouton">EN SAVOIR +</button>
+            </div>
           </div>
-
+          <div class="article-container">
+            <div class="blog-image"> <img src="./assets/entreprise.jpg"></div>
+            <div class="blog-content">
+              <h3>Lorem ipsum dolor </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id diam porta massa vulputate pharetra. Nullam id gravida mi. Donec ultrices risus a nunc rhoncus, in gravida lorem finibus. Vivamus ac sollicitudin ligula, a bibendum mi. Vivamus at nulla auctor, imperdiet leo in, imperdiet lacus. Morbi porta dapibus diam, id accumsan urna.</p>
+              <button class="bouton">EN SAVOIR +</button>
+            </div>
+          </div>
 
           <!-- Faire une boucle WP pour récupérer les articles -->
 
 
         </div>
       </section>
+
+        <div class="footer">  </div>
 	</div>
+
+
+
 </template>
 
 <script>
@@ -227,5 +241,120 @@ li{
   margin: 0 auto;
 }
 
+@media (max-width: 1243px) {
+  .products-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+    .product-card{
+    margin-bottom: 70px;
 
+  }
+  .products-container{
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 764px) {
+  .products-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+    .product-card{
+    width: 100%;
+  }
+
+  .products-container{
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-card{
+    text-align: center;
+    margin-bottom: 70px;
+    padding-right: 0;
+  }
+  .products-container{
+    width: 96%;
+    margin: 0 auto;
+  }
+  .yellow-button{
+    position: relative;
+    margin: auto;
+  }
+  
+
+}
+/* --------- Actus --------------- */
+
+.blog{
+  background-color: #FFFFFF;
+  padding-bottom: 2rem;
+}
+
+
+.section-title h2{
+  text-align: center;
+  text-transform: uppercase;
+  color: #151000;
+  font-weight: 900;
+  padding-top: 20px;
+}
+
+.articles-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 76%;
+  margin: 0 auto;
+}
+
+.article-container{
+  max-width: 450px;
+  height: auto;
+  padding-right: 20px;
+}
+
+.blog-image img{
+  width: 450px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-container h3{
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.article-container p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 1243px) {
+
+.articles-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 96%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+}
+
+
+.footer{
+  height: 70px;
+  width: 100%;
+  background-color: #151000;
+}
 </style>

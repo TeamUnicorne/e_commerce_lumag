@@ -31,6 +31,7 @@ name: "Loader"
     margin: auto;
     font-size: 3rem;
     letter-spacing: .1rem;
+    font-weight: 900;
   }
   span {
     color: #F8F8F8;

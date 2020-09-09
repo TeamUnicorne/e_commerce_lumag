@@ -103,5 +103,11 @@ name: "CardProducts",
   left: 0;
 }
 
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
 
 </style>
