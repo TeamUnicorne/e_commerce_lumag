@@ -4,8 +4,8 @@
     <h3 class="product-name">{{ name }}</h3>
     <div class="product-price">{{regular_price}} €</div>
     <div v-if="sale_price" class="promo-price">{{sale_price}} €</div>
-    <button class="yellow-button"><router-link :to="'/produit/' + slug">SELECTIONNER</router-link></button>
-
+    <router-link class="yellow-button" :to="'/produit/' + slug">SELECTIONNER</router-link>
+    <button class="add-to-cart"> + </button>
   </div>
 </template>
 
@@ -105,11 +105,6 @@ name: "CardProducts",
   left: 0;
 }
 
-@media screen and (max-width: 992px) {
-  .column {
-    width: 50%;
-  }
-}
 
 
 </style>
