@@ -1,7 +1,7 @@
 <template>
 <div id="container">
   <div id="loader_container">
-    <h1>Bienvenu chez Lumag</h1>
+    <h1>Bienvenue chez Lumag</h1>
     <span>Chargement en cours...</span>
   </div>
 </div>
