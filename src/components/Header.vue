@@ -6,7 +6,7 @@
 
 					<div class="logo" id="logo">
 						<a href="#">
-							<img src="../assets/logo.png" alt="site logo" width="64">
+							<img src="../assets/logo-microtracteur.svg" alt="site logo" width="64">
 						</a>
 					</div>
 
