@@ -2,11 +2,12 @@
   <header class="site-header" id="site-header">
     <div class="header-container">
       <div class="navigation-bar">
-
-        <div class="logo" id="logo">
-          <a href="#">
-            <img src="../assets/logo.png" alt="site logo" width="64">
-          </a>
+        <div class="top-bar">
+          <div class="logo" id="logo">
+            <a href="#">
+              <img src="../assets/logo-microtracteur.svg" alt="site logo" width="260">
+            </a>
+          </div>
         </div>
 
         <div class="menu-bar">
@@ -18,6 +19,8 @@
             <a href="#">Entretien des terrains</a>
 
             <a href="#">Pièces de rechange</a>
+
+            <a href="#">Contact</a>
           </div>
 
           <div class="menu-right">
@@ -42,27 +45,33 @@ export default {
 .navigation-bar{
   background-color: #FEBE21;
   overflow: hidden;
+
 }
 
 
 .logo{
-  height: 80px;
-  width: 100%;
-  padding-left: 200px;
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.top-bar{
+  display: flex;
+  justify-content: center;
 }
 
 .menu-bar{
+  display: flex;
+  justify-content: center;
   background-color: #151000;
   height: 50px;
   line-height: 50px;
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
+  }
 
 .menu-left{
-  float: left;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .menu-bar .menu-left a {
@@ -85,9 +94,9 @@ export default {
 }
 
 .menu-right{
-  float: right;
   display: flex;
   flex-direction: row;
+  padding-left: 2rem;
 }
 
 .menu-bar .menu-right a {
