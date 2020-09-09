@@ -1,7 +1,7 @@
 <template>
 <div id="container">
   <div id="loader_container">
-    <h1>Bienvenue chez Lumag</h1>
+    <h1>{{titre}}</h1>
     <span>Chargement en cours...</span>
   </div>
 </div>
@@ -9,7 +9,10 @@
 
 <script>
 export default {
-name: "Loader"
+name: "Loader",
+  props: {
+    titre: String
+  }
 }
 </script>
 
