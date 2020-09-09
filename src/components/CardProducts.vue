@@ -4,7 +4,7 @@
     <h3 class="product-name">{{ name }}</h3>
     <div class="product-price">{{regular_price}} €</div>
     <div v-if="sale_price" class="promo-price">{{sale_price}} €</div>
-    <button class="yellow-button">ADD TO CART</button>
+    <button class="yellow-button">SÉLECTIONNER</button>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ name: "CardProducts",
   text-align: center;
   text-transform: uppercase;
   color: #151000;
+  font-weight: 900;
 }
 
 .img-product{
@@ -36,12 +37,25 @@ name: "CardProducts",
   object-fit: cover;
 }
 
+.product-name{
+  min-height: 40px;
+}
+
+
 .products-cards .product-name h3{
   font-weight: 400;
 }
 
+.product-card{
+    position: relative;
+    
+}
 
-.product-price p{
+.products-cards .product-card {
+  max-width: 250px;
+}
+
+.product-price {
   font-weight: 900;
   font-size: 25px;
 }
@@ -50,16 +64,44 @@ name: "CardProducts",
   display:block;
   background-color: #FEBE21;
   padding-left: 10px;
-  padding-right: 3px;
+  padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   color:#151000 ;
-  width: 150px;
+  width: auto;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 900;
   border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   -webkit-border-radius: 3px 3px 3px 3px;
+  border: 0;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  
 }
+
+.yellow-button:hover{
+  display:block;
+  background-color: #151000;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #FEBE21;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 0;
+    position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+
 </style>

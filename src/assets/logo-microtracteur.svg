@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 624 211" style="enable-background:new 0 0 624 211;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#13110A;}
+	.st1{fill:none;stroke:#13110A;stroke-width:7;stroke-miterlimit:10;stroke-dasharray:11.9574,11.9574;}
+	.st2{fill:#FCBD25;}
+	.st3{font-family:'PFDinTextUniversal-ExtraBlack';}
+	.st4{font-size:63.383px;}
+	.st5{fill:none;}
+	.st6{font-family:'PFDinTextUniversal-Thin';}
+	.st7{fill:none;stroke:#FCBD25;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{fill:#FDF9E9;}
+</style>
+<g>
+	<path class="st0" d="M593.8,200.8H31.3c-11.1,0-20.1-9-20.1-20.1V29.2c0-11.1,9-20.1,20.1-20.1h562.5c11.1,0,20.1,9,20.1,20.1
+		v151.5C614,191.8,604.9,200.8,593.8,200.8z"/>
+	<path class="st1" d="M593.8,200.8H31.3c-11.1,0-20.1-9-20.1-20.1V29.2c0-11.1,9-20.1,20.1-20.1h562.5c11.1,0,20.1,9,20.1,20.1
+		v151.5C614,191.8,604.9,200.8,593.8,200.8z"/>
+</g>
+<text transform="matrix(1 0 0 1 41.0175 83.3623)" class="st2 st3 st4">MICROTRACTEUR</text>
+<rect x="166.9" y="118.5" class="st5" width="283.1" height="83.9"/>
+<text transform="matrix(1 0 0 1 168.5755 172.257)" class="st2 st6 st4">DIFFUSION</text>
+<line class="st7" x1="47.1" y1="103.6" x2="569.8" y2="103.6"/>
+<g id="Composant_1_1_1_">
+	<g>
+		<path id="Rectangle_1_9_" class="st8" d="M69.1-367.3h568.7c8.4,0,15.2,8,15.2,17.8v127.3c0,9.9-6.8,17.8-15.2,17.8H69.1
+			c-8.4,0-15.2-8-15.2-17.8v-127.3C53.8-359.3,60.7-367.3,69.1-367.3z"/>
+	</g>
+</g>
+</svg>

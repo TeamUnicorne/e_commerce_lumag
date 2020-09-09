@@ -16,6 +16,7 @@
         <div class="section-text-intro">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus metus, ultricies eget iaculis et, mattis et nunc. Nam fermentum augue rutrum neque mollis vulputate. Praesent id urna sagittis, feugiat metus vitae, cursus lorem. In laoreet sem venenatis urna vehicula feugiat. Donec magna nulla, ultricies tincidunt enim suscipit, ornare mattis ex. Aliquam dictum purus ut tempus molestie. Integer bibendum finibus neque, a euismod libero posuere sit amet. In metus ipsum, facilisis et erat at, molestie ornare nisi. Nullam vitae urna id dolor tincidunt condimentum in eget neque. Praesent aliquam sem sit amet eros sollicitudin lacinia. Sed ut ornare mi. Nullam eros dolor, vehicula nec nibh sed, molestie tristique ligula.</p>
         </div>
+        <button class="bouton">EN SAVOIR +</button>
       </div>
     </section>
       <section class="products">
@@ -115,14 +116,20 @@ a{
 }
 
 #app {
-  color: #2c3e50;
+  color: #151000;
 }
+
+h1, h2, h3{
+  font-weight: 400;
+}
+
+
 
 /* --------- Slider --------------- */
 
 .slider img {
   width: 100%;
-  height: auto;
+  height: 400px;
   object-fit: cover;
 
 }
@@ -145,6 +152,51 @@ a{
 .intro h1{
   color: #FEBE21;
   font-size: 30px;
+  font-weight: 900;
+}
+
+.bouton{
+  display:inline-block;
+  background-color: #FEBE21;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:#151000 ;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 1px solid #FEBE21;
+  text-align: center;
+   margin-top: 20px;
+   margin-bottom: 10px;
+  
+}
+
+.bouton:hover{
+  display:inline-block;
+  background-color: #151000;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #FEBE21;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 1px solid #FEBE21;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
 }
 
 li{
@@ -155,10 +207,14 @@ li{
 .products-cards{
   display: flex;
   flex-direction: row;
-  max-width: 250px;
+  justify-content: space-between;
   height: auto;
   /* background-color: #FFFFFF; */
   padding: 10px;
+  
+}
+.product-card{
+  padding-right:30px;
 }
 
 .products{
