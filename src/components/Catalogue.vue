@@ -80,6 +80,13 @@ li {
   }
 }
 
+@media (max-width: 764px) {
+  #catalogue .products .products-container .products-cards{
+      display: grid;
+      grid-gap: 70px 70px;
+      grid-template-columns: auto ;
+  }
+}
 
 
 </style>

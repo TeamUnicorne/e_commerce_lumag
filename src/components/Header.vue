@@ -9,11 +9,18 @@
                 <img src="../assets/logo-microtracteur.svg" alt="site logo" width="260">
               </a>
             </div>
+                
+                <div class="burger" id="burger" v-on:click="openBurger">  
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                  <div class="line3"></div>
+                </div>
+               
+              
 					</div>
 
-					<div class="menu-bar">
+					<div class="menu-bar" id="sousMenu">
 						<div class="menu-left">
-
 							<router-link to="/">Home</router-link>
 							<router-link to="/mini-dumper">Mini dumper</router-link>
 							<router-link to="/construction">Construction</router-link>
@@ -23,8 +30,10 @@
 
 						<div class="menu-right">
               <router-link to="/identification">Identification</router-link>
-              <router-link id="panier" to="/Panier">🛒</router-link>
+              <router-link id="panier" to="/Panier"><i class="fas fa-shopping-cart"></i></router-link>
 						</div>
+
+
 					</div>
 
 				</div>
@@ -36,7 +45,19 @@
 
 <script>
 export default {
-  name: "header"
+  name: "header",
+  methods: {
+    openBurger: function () {
+      // `this` fait référence à l'instance de Vue à l'intérieur de `methods`
+      let x = document.getElementById("sousMenu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+      
+    }
+  }
 }
 </script>
 
@@ -45,6 +66,11 @@ export default {
   background-color: #FEBE21;
   overflow: hidden;
 }
+.fa-shopping-cart{
+  font-size: 25px;
+}
+
+
 .logo{
   height: auto;
   padding-bottom: 20px;
@@ -92,7 +118,7 @@ export default {
 
 }
 
-.menu-right{
+.menu-right {
   display: flex;
   flex-direction: row;
   padding-left: 2rem;
@@ -125,5 +151,49 @@ export default {
   line-height: 50px;
   text-transform: uppercase;
   font-weight: 900;
+}
+
+.burger div{
+  width: 40px;
+  height: 4px;
+  background-color: #151000;
+  margin: 5px;
+}
+
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 980px) {
+    .menu-bar{
+      position: absolute;
+      display:flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      left: O;
+      background-color: #151000;
+      display: none;
+    }
+    
+    
+    .menu-left, .menu-right{
+      display:flex;
+      flex-direction: column;
+      align-items: left;
+      padding-left: 1rem; 
+    }
+    
+    .burger{
+      display: block;
+      position: absolute;
+      left:10px;
+      top: 50px;
+    }
+
+  
 }
 </style>
