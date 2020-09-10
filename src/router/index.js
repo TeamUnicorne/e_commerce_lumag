@@ -9,6 +9,7 @@ import Home from '../components/Home'
 import CartView from '../components/CartView'
 import ProductView from '../components/ProductView'
 import Catalogue from '../components/Catalogue'
+import Postview from "../components/Postview";
 
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes = [
 		path: '/produit/:slug',
 		name: 'ProductView',
 		component: ProductView
+	},
+	{
+		path: '/post/:slug',
+		name: 'Postview',
+		component: Postview
 	},
 	{
 		path: '/panier',

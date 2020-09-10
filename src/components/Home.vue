@@ -41,29 +41,19 @@
         <h2>Dernières actus</h2>
       </div>
 
-      <div class="articles-container">
-        <div class="article-container">
-          <div class="blog-image"> <img src="../assets/entreprise.jpg"></div>
-          <div class="blog-content">
-            <h3>Lorem ipsum dolor </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id diam porta massa vulputate pharetra. Nullam id gravida mi. Donec ultrices risus a nunc rhoncus, in gravida lorem finibus. Vivamus ac sollicitudin ligula, a bibendum mi. Vivamus at nulla auctor, imperdiet leo in, imperdiet lacus. Morbi porta dapibus diam, id accumsan urna.</p>
-            <button class="bouton">EN SAVOIR +</button>
-          </div>
-        </div>
-        <div class="article-container">
-          <div class="blog-image"> <img src="../assets/entreprise.jpg"></div>
-          <div class="blog-content">
-            <h3>Lorem ipsum dolor </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id diam porta massa vulputate pharetra. Nullam id gravida mi. Donec ultrices risus a nunc rhoncus, in gravida lorem finibus. Vivamus ac sollicitudin ligula, a bibendum mi. Vivamus at nulla auctor, imperdiet leo in, imperdiet lacus. Morbi porta dapibus diam, id accumsan urna.</p>
-            <button class="bouton">EN SAVOIR +</button>
-          </div>
-        </div>
-
+      <div class="articles-container" >
+				<div class="article-container" v-for="(post, index) in posts" :key="index">
+					<PostCard v-bind:image="post._embedded['wp:featuredmedia'][0].media_details.sizes['large'].source_url"
+										v-bind:image_alt="post._embedded['wp:featuredmedia'][0].alt_text"
+										v-bind:title="post.title.rendered"
+										v-bind:excerpt="post.excerpt.rendered"
+										v-bind:post_slug="post.slug"
+					/>
+				</div>
         <!-- Faire une boucle WP pour récupérer les articles -->
-
-
       </div>
     </section>
+
 
 
   </div>
@@ -72,7 +62,9 @@
 
 <script>
 import CardProducts from './CardProducts'
+import PostCard from './PostCard'
 import {ApiReader} from '@/constants'
+import {PostsApiReader} from '@/constants'
 import Loader from "@/components/Loader";
 
 const axios = require('axios');
@@ -81,11 +73,16 @@ export default {
 	name: 'Home',
 	components: {
     Loader,
-		CardProducts
+		CardProducts,
+		PostCard
 	},
 	data() {
 		return {
 			products: null,
+			posts: null,
+			queryOptions: {
+				_embed: true, //Response should include embedded resources.
+			},
       loading: false,
       titre: "Bienvenue chez Lumag"
 		}
@@ -100,9 +97,16 @@ export default {
 					this.products = response.data
 					this.products.forEach(p => localStorage.setItem('produit-' + p.slug, JSON.stringify(p)));
 				})
+		axios
+				.get(`${PostsApiReader.GET_ALL_POSTS}`,{params: this.queryOptions})
+				.then((response)=>{
+					this.posts = response.data
+					this.posts.forEach(art => localStorage.setItem('posts-' + art.slug, JSON.stringify(art)));
+				})
     return this.loading = false
   }
 }
+
 </script>
 
 <style>

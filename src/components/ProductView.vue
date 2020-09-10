@@ -40,7 +40,6 @@ export default {
 		Loader
 	},
 	data () {return {
-		products: null,
 		loading: false,
 		titre: "Chargement de votre produit !"
 	}
@@ -52,7 +51,6 @@ export default {
 			return produit
 		}
 	},
-
 };
 </script>
 <style>
