@@ -111,7 +111,7 @@ name: "CardProducts",
   bottom: 0px;
   right: 30px;
   display:block;
-  
+
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
@@ -147,7 +147,4 @@ name: "CardProducts",
   -webkit-border-radius: 3px 3px 3px 3px;
   border: 1px solid #151000;
 }
-
-
-
 </style>
