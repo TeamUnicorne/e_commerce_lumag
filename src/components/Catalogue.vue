@@ -2,12 +2,12 @@
   <div v-if="loading">
     <Loader/>
   </div>
-  <div v-else id="calatogue">
+  <div v-else id="catalogue">
     <section class="products">
       <h2>Produits</h2>
-      <div class="productscontainer">
-        <ul class="productscards">
-          <li class="productcard" v-for="(product, index) in products" :key="index">
+      <div class="products-container">
+        <ul class="products-cards">
+          <li class="product-card" v-for="(product, index) in products" :key="index">
             <CardProducts v-bind:image="product.images[0].src" v-bind:image_alt="product.image_alt"
                           v-bind:name="product.name"
                           v-bind:regular_price="product.regular_price"
@@ -54,13 +54,11 @@ li {
 }
 
 
-.productscards {
-  display: flex;
-  flex-direction: row;
-  max-width: 250px;
-  height: auto;
-  /* backgroundcolor: #FFFFFF; */
-  padding: 10px;
+#catalogue .products .products-container .products-cards{
+  display: grid;
+  grid-gap: 70px 70px;
+  grid-template-columns: auto auto auto;
+
 }
 
 .products {
@@ -68,8 +66,27 @@ li {
   padding-bottom: 15px;
 }
 
-.productscontainer {
+.products-container {
   width: 76%;
   margin: 0 auto;
 }
+
+@media (max-width: 980px) {
+    #catalogue .products .products-container .products-cards{
+    display: grid;
+    grid-gap: 70px 70px;
+    grid-template-columns: auto auto ;
+
+  }
+}
+
+@media (max-width: 764px) {
+  #catalogue .products .products-container .products-cards{
+      display: grid;
+      grid-gap: 70px 70px;
+      grid-template-columns: auto ;
+  }
+}
+
+
 </style>
