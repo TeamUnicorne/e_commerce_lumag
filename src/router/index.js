@@ -7,7 +7,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home'
 import CartView from '../components/CartView'
-import MentionsLegales from '../components/MentionsLegales'
+import Cgv from '../components/Cgv'
+import Contact from '../components/Contact'
+import Rgpd from '../components/Rgpd'
 import ProductView from '../components/ProductView'
 import Catalogue from '../components/Catalogue'
 import Postview from "../components/Postview";
@@ -41,9 +43,19 @@ const routes = [
 		component: Catalogue,
 	},
 	{
-		path: '/mentions-légales',
-		name: 'MentionsLegales',
-		component: MentionsLegales,
+		path: '/cgv',
+		name: 'Cgv',
+		component: Cgv,
+	},
+	{
+		path: '/rgpd',
+		name: 'Rgpd',
+		component: Rgpd,
+	},
+	{
+		path: '/contact',
+		name: 'Contact',
+		component: Contact,
 	}
 ]
 
