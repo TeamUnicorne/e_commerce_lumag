@@ -1,10 +1,10 @@
 <template>
-		<div>HELLO MENTIONS</div>
+		<div>HELLO Contact</div>
 </template>
 
 <script>
 export default {
-name: "MentionsLegales"
+name: "Contact"
 }
 </script>
 
