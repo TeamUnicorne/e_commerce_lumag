@@ -7,6 +7,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home'
 import CartView from '../components/CartView'
+import MentionsLegales from '../components/MentionsLegales'
 import ProductView from '../components/ProductView'
 import Catalogue from '../components/Catalogue'
 import Postview from "../components/Postview";
@@ -38,6 +39,11 @@ const routes = [
 		path: '/catalogue',
 		name: 'Catalogue',
 		component: Catalogue,
+	},
+	{
+		path: '/mentions-légales',
+		name: 'MentionsLegales',
+		component: MentionsLegales,
 	}
 ]
 

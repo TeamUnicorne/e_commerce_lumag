@@ -5,6 +5,7 @@
 				<img src="../assets/logo-microtracteur.svg" alt="site logo" width="180">
 			</a>
 		</div>
+		<router-link to="/mentions-légales">CGV</router-link>
 		<div class="footer-text">Copyright 2020 UNICKORN !</div>
 	</div>
 </template>
