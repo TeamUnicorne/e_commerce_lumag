@@ -15,7 +15,7 @@
 				<div class="section-text-intro">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus metus, ultricies eget iaculis et, mattis et nunc. Nam fermentum augue rutrum neque mollis vulputate. Praesent id urna sagittis, feugiat metus vitae, cursus lorem. In laoreet sem venenatis urna vehicula feugiat. Donec magna nulla, ultricies tincidunt enim suscipit, ornare mattis ex. Aliquam dictum purus ut tempus molestie. Integer bibendum finibus neque, a euismod libero posuere sit amet. In metus ipsum, facilisis et erat at, molestie ornare nisi. Nullam vitae urna id dolor tincidunt condimentum in eget neque. Praesent aliquam sem sit amet eros sollicitudin lacinia. Sed ut ornare mi. Nullam eros dolor, vehicula nec nibh sed, molestie tristique ligula.</p>
 				</div>
-        <router-link  class="bouton" to="/catalogue">EN SAVOIR +</router-link>
+        <router-link  class="bouton" to="/catalogue">NOTRE CATALOGUE</router-link>
 			</div>
 		</section>
 		<section class="products">
@@ -41,38 +41,30 @@
         <h2>Dernières actus</h2>
       </div>
 
-      <div class="articles-container">
-        <div class="article-container">
-          <div class="blog-image"> <img src="../assets/entreprise.jpg"></div>
-          <div class="blog-content">
-            <h3>Lorem ipsum dolor </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id diam porta massa vulputate pharetra. Nullam id gravida mi. Donec ultrices risus a nunc rhoncus, in gravida lorem finibus. Vivamus ac sollicitudin ligula, a bibendum mi. Vivamus at nulla auctor, imperdiet leo in, imperdiet lacus. Morbi porta dapibus diam, id accumsan urna.</p>
-            <button class="bouton">EN SAVOIR +</button>
-          </div>
-        </div>
-        <div class="article-container">
-          <div class="blog-image"> <img src="../assets/entreprise.jpg"></div>
-          <div class="blog-content">
-            <h3>Lorem ipsum dolor </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id diam porta massa vulputate pharetra. Nullam id gravida mi. Donec ultrices risus a nunc rhoncus, in gravida lorem finibus. Vivamus ac sollicitudin ligula, a bibendum mi. Vivamus at nulla auctor, imperdiet leo in, imperdiet lacus. Morbi porta dapibus diam, id accumsan urna.</p>
-            <button class="bouton">EN SAVOIR +</button>
-          </div>
-        </div>
-
+      <div class="articles-container" >
+				<div class="article-container" v-for="(post, index) in posts" :key="index">
+					<PostCard v-bind:image="post._embedded['wp:featuredmedia'][0].media_details.sizes['large'].source_url"
+										v-bind:image_alt="post._embedded['wp:featuredmedia'][0].alt_text"
+										v-bind:title="post.title.rendered"
+										v-bind:excerpt="post.excerpt.rendered"
+										v-bind:post_slug="post.slug"
+					/>
+				</div>
         <!-- Faire une boucle WP pour récupérer les articles -->
-
-
       </div>
     </section>
 
-    <div class="footer">  </div>
+
+
   </div>
 
 </template>
 
 <script>
 import CardProducts from './CardProducts'
+import PostCard from './PostCard'
 import {ApiReader} from '@/constants'
+import {PostsApiReader} from '@/constants'
 import Loader from "@/components/Loader";
 
 const axios = require('axios');
@@ -81,11 +73,16 @@ export default {
 	name: 'Home',
 	components: {
     Loader,
-		CardProducts
+		CardProducts,
+		PostCard
 	},
 	data() {
 		return {
 			products: null,
+			posts: null,
+			queryOptions: {
+				_embed: true, //Response should include embedded resources.
+			},
       loading: false,
       titre: "Bienvenue chez Lumag"
 		}
@@ -100,9 +97,16 @@ export default {
 					this.products = response.data
 					this.products.forEach(p => localStorage.setItem('produit-' + p.slug, JSON.stringify(p)));
 				})
+		axios
+				.get(`${PostsApiReader.GET_ALL_POSTS}`,{params: this.queryOptions})
+				.then((response)=>{
+					this.posts = response.data
+					this.posts.forEach(art => localStorage.setItem('posts-' + art.slug, JSON.stringify(art)));
+				})
     return this.loading = false
   }
 }
+
 </script>
 
 <style>
@@ -163,6 +167,7 @@ h1, h2, h3{
 .intro p{
   width: 76%;
   margin: 0 auto;
+  font-size: 1.1rem;
 }
 
 .intro h1{
@@ -290,8 +295,26 @@ li{
   .yellow-button{
     position: relative;
     margin: auto;
+    margin-bottom: 10px;
+    
+  }
+  .yellow-button:hover{
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
   }
 
+  .add-to-cart{
+    position: relative;
+    margin: auto;
+    right: 0;
+  }
+
+  .add-to-cart:hover{
+    position: relative;
+    margin: auto;
+    right: 0;
+  }
 
 }
 /* --------- Actus --------------- */
@@ -319,13 +342,13 @@ li{
 }
 
 .article-container{
-  max-width: 450px;
+  max-width: 550px;
   height: auto;
   padding-right: 20px;
 }
 
 .blog-image img{
-  width: 450px;
+  width: 550px;
   height: 200px;
   object-fit: cover;
 }
@@ -354,9 +377,5 @@ li{
 }
 
 
-.footer{
-  height: 70px;
-  width: 100%;
-  background-color: #151000;
-}
+
 </style>

@@ -1,15 +1,18 @@
 <template>
   <div>
-    <img class="img-product" v-bind:src="image" v-bind:alt="image_alt"/>
+    <img class="img-product" v-bind:src="image" v-bind:alt="image_alt + 'altimage'"/>
     <h3 class="product-name">{{ name }}</h3>
     <div class="product-price">{{regular_price}} €</div>
     <div v-if="sale_price" class="promo-price">{{sale_price}} €</div>
-    <router-link class="yellow-button" :to="'/produit/' + slug">SELECTIONNER</router-link>
-
+    <router-link class="yellow-button" :to="'/produit/' + slug">+ D'INFO</router-link>
+    <button class="add-to-cart" v-on:click="addOnCart(slug)"> AU PANIER ! </button>
+    <pre style="display: none">{{$root.panier = panier}}</pre>
   </div>
 </template>
 
 <script>
+let varPanier = []
+let qte = 0
 export default {
 name: "CardProducts",
 	props: {
@@ -19,8 +22,25 @@ name: "CardProducts",
 		name : String,
 		slug : String,
 		sale_price : String,
-		regular_price : String
-	}
+		regular_price : String,
+    product: String
+	},
+  data() {
+    return {
+      panier: varPanier,
+      qty: 0
+    }
+  },
+  methods: {
+    addOnCart: (slug) => {
+      qte++
+      varPanier.push({
+        slug, qte
+      })
+      let panierjson = JSON.parse(JSON.stringify(varPanier))
+      console.log(panierjson)
+    }
+  }
 }
 </script>
 
@@ -55,6 +75,7 @@ name: "CardProducts",
 
 .products-cards .product-card {
   max-width: 250px;
+  height: 425px;
 }
 
 .product-price {
@@ -79,7 +100,7 @@ name: "CardProducts",
   -webkit-border-radius: 3px 3px 3px 3px;
   border: 0;
   position: absolute;
-  bottom: -40px;
+  bottom: 0px;
   left: 0;
 
 }
@@ -101,15 +122,49 @@ name: "CardProducts",
   -webkit-border-radius: 3px 3px 3px 3px;
   border: 0;
     position: absolute;
-  bottom: -40px;
+  bottom: 0px;
   left: 0;
 }
 
-@media screen and (max-width: 992px) {
-  .column {
-    width: 50%;
-  }
+.add-to-cart{
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+  display:block;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #151000;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 1px solid #151000;
 }
 
-
+.add-to-cart:hover{
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+  display:block;
+  background-color: #151000 ;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:#FDF8E8;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 1px solid #151000;
+}
 </style>
