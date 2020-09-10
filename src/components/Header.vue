@@ -30,7 +30,9 @@
 
 						<div class="menu-right">
               <router-link to="/identification">Identification</router-link>
-              <router-link id="panier" to="/Panier"><i class="fas fa-shopping-cart"></i></router-link>
+              <router-link id="panier" to="/Panier"><i class="fas fa-shopping-cart"></i>
+                <span>{{$root.panier.length}}</span>
+              </router-link>
 						</div>
 
 
@@ -143,6 +145,10 @@ export default {
 #panier {
   font-size: 2rem;
   position: relative;
+}
+#panier span{
+  color: #FEBE21;
+  font-size: medium;
 }
 
 .menu-bar .menu-right a:active {

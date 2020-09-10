@@ -43,7 +43,7 @@ export default {
       this.loading = false
           axios
               .get(`${ApiReader.BASE_URL}${ApiReader.GET_ALL_PRODUCTS}?${ApiReader.CLIENT_KEY}&${ApiReader.SECRET_KEY}`)
-          .then(response => (this.products = response.data))
+              .then(response => (this.products = response.data))
     }
 }
 </script>

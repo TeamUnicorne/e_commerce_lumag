@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 new Vue({
 	router,
 	data:{
-		panier: "[{slug: String, qty: Number}]"
+		panier: [{slug: String, qty: Number}]
 	},
 	render: h => h(App)
 }).$mount('#app')
