@@ -16,6 +16,7 @@ import Postview from "../components/Postview";
 
 
 Vue.use(VueRouter)
+
 const routes = [
 	{
 		path: '/',
@@ -60,6 +61,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+	mode: 'history',
 	routes
 })
 

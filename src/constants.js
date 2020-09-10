@@ -8,3 +8,4 @@ export class ApiReader {
 export class PostsApiReader {
 	static GET_ALL_POSTS ="https://unick-orn-lumag.go.yj.fr/index.php/wp-json/wp/v2/posts";
 }
+

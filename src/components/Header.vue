@@ -5,18 +5,18 @@
 				<div class="navigation-bar">
           <div class="top-bar">
             <div class="logo" id="logo">
-              <a href="#">
+							<router-link to="/">
                 <img src="../assets/logo-microtracteur.svg" alt="site logo" width="260">
-              </a>
+							</router-link>
             </div>
-                
-                <div class="burger" id="burger" v-on:click="openBurger">  
+
+                <div class="burger" id="burger" v-on:click="openBurger">
                   <div class="line1"></div>
                   <div class="line2"></div>
                   <div class="line3"></div>
                 </div>
-               
-              
+
+
 					</div>
 
 					<div class="menu-bar" id="sousMenu">
@@ -55,7 +55,7 @@ export default {
             } else {
                 x.style.display = "block";
             }
-      
+
     }
   }
 }
@@ -179,15 +179,15 @@ export default {
       background-color: #151000;
       display: none;
     }
-    
-    
+
+
     .menu-left, .menu-right{
       display:flex;
       flex-direction: column;
       align-items: left;
-      padding-left: 1rem; 
+      padding-left: 1rem;
     }
-    
+
     .burger{
       display: block;
       position: absolute;
@@ -195,6 +195,6 @@ export default {
       top: 50px;
     }
 
-  
+
 }
 </style>
