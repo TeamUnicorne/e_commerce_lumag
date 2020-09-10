@@ -7,5 +7,9 @@ Vue.use(EasySlider);
 
 Vue.config.productionTip = false
 new Vue({
-	router, render: h => h(App)
+	router,
+	data:{
+		panier: "[{slug: String, qty: Number}]"
+	},
+	render: h => h(App)
 }).$mount('#app')

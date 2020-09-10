@@ -5,13 +5,14 @@
   <div v-else id="calatogue">
     <section class="products">
       <h2>Produits</h2>
-      <div class="productscontainer">
-        <ul class="productscards">
-          <li class="productcard" v-for="(product, index) in products" :key="index">
+      <div class="products-container">
+        <ul class="products-cards">
+          <li class="product-card" v-for="(product, index) in products" :key="index">
             <CardProducts v-bind:image="product.images[0].src" v-bind:image_alt="product.image_alt"
                           v-bind:name="product.name"
                           v-bind:regular_price="product.regular_price"
-                          v-bind:sale_price="product.sale_price"/>
+                          v-bind:sale_price="product.sale_price"
+                          v-bind:slug="product.slug"/>
           </li>
         </ul>
       </div>

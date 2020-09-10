@@ -23,7 +23,8 @@
 
 						<div class="menu-right">
               <router-link to="/identification">Identification</router-link>
-              <router-link id="panier" to="/Panier">🛒</router-link>
+              <router-link id="panier" to="/Panier">🛒<span class="nb-products-cart"></span></router-link>
+
 						</div>
 					</div>
 
@@ -116,6 +117,7 @@ export default {
 
 #panier {
   font-size: 2rem;
+  position: relative;
 }
 
 .menu-bar .menu-right a:active {
@@ -125,5 +127,13 @@ export default {
   line-height: 50px;
   text-transform: uppercase;
   font-weight: 900;
+}
+
+.nb-products-cart {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
 }
 </style>

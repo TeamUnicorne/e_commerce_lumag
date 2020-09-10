@@ -32,10 +32,6 @@
 
 export default {
 	name: 'ProductView',
-	// data () {
-	//   return {
-	//   }
-	// },
 	computed: {
 		produit() {
 			let produit = localStorage.getItem('produit-' + this.$route.params.slug)
