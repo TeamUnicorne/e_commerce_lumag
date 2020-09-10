@@ -5,9 +5,9 @@
 				<div class="navigation-bar">
           <div class="top-bar">
             <div class="logo" id="logo">
-              <a href="#">
+							<router-link to="/">
                 <img src="../assets/logo-microtracteur.svg" alt="site logo" width="260">
-              </a>
+							</router-link>
             </div>
 
                 <div class="burger" id="burger" v-on:click="openBurger">

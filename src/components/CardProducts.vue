@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="img-product" v-bind:src="image" v-bind:alt="image_alt"/>
+    <img class="img-product" v-bind:src="image" v-bind:alt="image_alt + 'altimage'"/>
     <h3 class="product-name">{{ name }}</h3>
     <div class="product-price">{{regular_price}} €</div>
     <div v-if="sale_price" class="promo-price">{{sale_price}} €</div>

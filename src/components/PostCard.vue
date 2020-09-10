@@ -1,6 +1,6 @@
 <template>
 	<div >
-		<div class="blog-image"> <img v-bind:src="image" v-bind:alt="image_alt"/></div>
+		<div class="blog-image"> <img v-bind:src="image" v-bind:alt="image_alt "/></div>
 		<div class="blog-content">
 			<h3>{{title}}</h3>
 			<p>{{excerpt}}</p>
