@@ -21,7 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9011ffd5-94c0-474d-9b5c-88ff8575c2bd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/components/CardProducts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardProducts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Catalogue.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Catalogue.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
+>>>>>>> develop
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +106,7 @@
       <updated>1599516738763</updated>
       <workItem from="1599516741173" duration="914000" />
       <workItem from="1599543769601" duration="9458000" />
+      <workItem from="1599684053496" duration="19034000" />
     </task>
     <servers />
   </component>
@@ -133,13 +142,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680/200.-900.1600.860@0.0.1280.680" timestamp="1599485427986" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1599727681360">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.680/200.-900.1600.860@0.0.1280.680" timestamp="1599727681360" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/CardProducts.vue</url>
+<<<<<<< HEAD
+          <line>50</line>
+=======
           <line>29</line>
+>>>>>>> develop
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

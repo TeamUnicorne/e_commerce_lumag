@@ -5,11 +5,14 @@
     <div class="product-price">{{regular_price}} €</div>
     <div v-if="sale_price" class="promo-price">{{sale_price}} €</div>
     <router-link class="yellow-button" :to="'/produit/' + slug">+ D'INFO</router-link>
-    <button class="add-to-cart"> AU PANIER ! </button>
+    <button class="add-to-cart" v-on:click="addOnCart(slug)"> AU PANIER ! </button>
+    <pre style="display: none">{{$root.panier = panier}}</pre>
   </div>
 </template>
 
 <script>
+let varPanier = []
+let qte = 0
 export default {
 name: "CardProducts",
 	props: {
@@ -19,8 +22,25 @@ name: "CardProducts",
 		name : String,
 		slug : String,
 		sale_price : String,
-		regular_price : String
-	}
+		regular_price : String,
+    product: String
+	},
+  data() {
+    return {
+      panier: varPanier,
+      qty: 0
+    }
+  },
+  methods: {
+    addOnCart: (slug) => {
+      qte++
+      varPanier.push({
+        slug, qte
+      })
+      let panierjson = JSON.parse(JSON.stringify(varPanier))
+      console.log(panierjson)
+    }
+  }
 }
 </script>
 
