@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9011ffd5-94c0-474d-9b5c-88ff8575c2bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CardProducts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardProducts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,14 +121,14 @@
       <screen x="200" y="-900" width="1600" height="860" />
     </state>
     <state x="960" y="-570" key="IDE.errors.dialog/0.0.1280.680/200.-900.1600.860@200.-900.1600.860" timestamp="1599548447267" />
-    <state x="121" y="51" key="MergeDialog" timestamp="1599658268452">
+    <state x="-32" y="1" key="MergeDialog" timestamp="1599732861500">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="51" key="MergeDialog/0.0.1280.680/200.-900.1600.860@0.0.1280.680" timestamp="1599658268452" />
-    <state x="280" y="102" key="MultipleFileMergeDialog" timestamp="1599658268465">
+    <state x="-32" y="1" key="MergeDialog/0.0.1280.680/200.-900.1600.860@0.0.1280.680" timestamp="1599732861500" />
+    <state x="280" y="102" key="MultipleFileMergeDialog" timestamp="1599732861514">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680/200.-900.1600.860@0.0.1280.680" timestamp="1599658268465" />
+    <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680/200.-900.1600.860@0.0.1280.680" timestamp="1599732861514" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1599485427986">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -140,7 +139,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/CardProducts.vue</url>
-          <line>33</line>
+          <line>29</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
