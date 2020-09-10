@@ -15,7 +15,7 @@
 				<div class="section-text-intro">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus metus, ultricies eget iaculis et, mattis et nunc. Nam fermentum augue rutrum neque mollis vulputate. Praesent id urna sagittis, feugiat metus vitae, cursus lorem. In laoreet sem venenatis urna vehicula feugiat. Donec magna nulla, ultricies tincidunt enim suscipit, ornare mattis ex. Aliquam dictum purus ut tempus molestie. Integer bibendum finibus neque, a euismod libero posuere sit amet. In metus ipsum, facilisis et erat at, molestie ornare nisi. Nullam vitae urna id dolor tincidunt condimentum in eget neque. Praesent aliquam sem sit amet eros sollicitudin lacinia. Sed ut ornare mi. Nullam eros dolor, vehicula nec nibh sed, molestie tristique ligula.</p>
 				</div>
-        <router-link  class="bouton" to="/catalogue">EN SAVOIR +</router-link>
+        <router-link  class="bouton" to="/catalogue">NOTRE CATALOGUE</router-link>
 			</div>
 		</section>
 		<section class="products">
@@ -163,6 +163,7 @@ h1, h2, h3{
 .intro p{
   width: 76%;
   margin: 0 auto;
+  font-size: 1.1rem;
 }
 
 .intro h1{
@@ -290,8 +291,26 @@ li{
   .yellow-button{
     position: relative;
     margin: auto;
+    margin-bottom: 10px;
+    
+  }
+  .yellow-button:hover{
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
   }
 
+  .add-to-cart{
+    position: relative;
+    margin: auto;
+    right: 0;
+  }
+
+  .add-to-cart:hover{
+    position: relative;
+    margin: auto;
+    right: 0;
+  }
 
 }
 /* --------- Actus --------------- */
@@ -319,13 +338,13 @@ li{
 }
 
 .article-container{
-  max-width: 450px;
+  max-width: 550px;
   height: auto;
   padding-right: 20px;
 }
 
 .blog-image img{
-  width: 450px;
+  width: 550px;
   height: 200px;
   object-fit: cover;
 }
