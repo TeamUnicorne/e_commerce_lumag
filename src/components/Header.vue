@@ -176,7 +176,7 @@ export default {
 
 @media (max-width: 980px) {
     .menu-bar{
-      z-index: 1;
+      z-index: 99;
       position: absolute;
       display:flex;
       flex-direction: column;
