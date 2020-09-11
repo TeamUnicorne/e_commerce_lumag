@@ -4,11 +4,17 @@
       <img class="img-product" v-bind:src="product.images[0].src"
            v-bind:alt="product.images[0].alt"/>
       <h3 class="product-name">{{ product.name }}</h3>
-    </div>
+			<div>{{product.regular_price}}</div>
+			<div>{{product.regular_price }}</div>
   </div>
+    <button @click="postOrder">Valider</button>
+</div>
 </template>
 
 <script>
+import {ApiReader} from '@/constants'
+const axios = require('axios');
+let panier
 export default {
   name: 'CartView',
   components: {
@@ -17,13 +23,32 @@ export default {
     return {
       loading: false,
       titre: "Chargement de votre produit !",
-      panier: []
+      panier: [],
+      panierreview: [],
+      order: null
     }
   },
   mounted() {
     this.$root.panier.forEach(el => (
-        this.panier.push(JSON.parse(localStorage.getItem('produit-' + el.slug)))
+        this.panier.push(JSON.parse(localStorage.getItem('produit-' + el.slug )))
     ))
+    panier = this.panier
+    console.log(panier)
+  },
+  methods: {
+    postOrder: () => {
+      axios
+          .post(`${ApiReader.BASE_URL}${ApiReader.GET_URL_ORDER}?${ApiReader.CLIENT_KEY}&${ApiReader.SECRET_KEY}`,
+              {
+                body: panier
+              })
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((error) => {
+            console.log(error.response.data);
+          });
+    }
   }
 };
 </script>
