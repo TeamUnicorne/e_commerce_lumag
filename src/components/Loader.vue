@@ -1,10 +1,11 @@
 <template>
-<div id="container">
-  <div id="loader_container">
-    <h1>{{titre}}</h1>
-    <span>Chargement en cours...</span>
-  </div>
-</div>
+	<div id="container">
+		<div id="loader_container">
+			<h1>{{titre}}</h1>
+			<span>Chargement en cours...</span>
+			<img src="../assets/lumag-yellow-logo.svg" alt="Ceci est une image">
+		</div>
+	</div>
 </template>
 
 <script>

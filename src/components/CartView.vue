@@ -4,7 +4,8 @@
       <img class="img-product" v-bind:src="product.images[0].src"
            v-bind:alt="product.images[0].alt"/>
       <h3 class="product-name">{{ product.name }}</h3>
-      <p>{{order}}</p>
+			<div>{{product.regular_price}}</div>
+			<div>{{product.regular_price }}</div>
   </div>
     <button @click="postOrder">Valider</button>
 </div>
@@ -13,7 +14,6 @@
 <script>
 import {ApiReader} from '@/constants'
 const axios = require('axios');
-let WooCommerce
 let panier
 export default {
   name: 'CartView',
@@ -24,12 +24,13 @@ export default {
       loading: false,
       titre: "Chargement de votre produit !",
       panier: [],
+      panierreview: [],
       order: null
     }
   },
   mounted() {
     this.$root.panier.forEach(el => (
-        this.panier.push(JSON.parse(localStorage.getItem('produit-' + el.slug)))
+        this.panier.push(JSON.parse(localStorage.getItem('produit-' + el.slug )))
     ))
     panier = this.panier
     console.log(panier)
@@ -47,8 +48,6 @@ export default {
           .catch((error) => {
             console.log(error.response.data);
           });
-      WooCommerce.post("customers", panier)
-
     }
   }
 };
