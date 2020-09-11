@@ -28,7 +28,7 @@ name: "CardProducts",
   data() {
     return {
       panier: varPanier,
-      qty: 0
+      qty: qte
     }
   },
   methods: {
