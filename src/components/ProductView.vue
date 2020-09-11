@@ -91,4 +91,22 @@ margin: 2rem;
 .slider-btn-left,.slider-btn-right{
 	background: #F8F8F8;
 }
+@media (max-width: 980px) {
+	.product-container-top{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		margin: auto;
+	}
+	.block-right{
+		text-align: center;
+	}
+	.block-right .yellow-button{
+		display: inline-block;
+		text-align: center;
+	}
+
+
+}
 </style>

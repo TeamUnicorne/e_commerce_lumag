@@ -12,7 +12,7 @@
 
 <script>
 let varPanier = []
-let qte = 0
+let qte = 1
 export default {
 name: "CardProducts",
 	props: {
@@ -28,17 +28,16 @@ name: "CardProducts",
   data() {
     return {
       panier: varPanier,
-      qty: 0
+      qty: qte
     }
   },
   methods: {
     addOnCart: (slug) => {
-      qte++
       varPanier.push({
         slug, qte
       })
-      let panierjson = JSON.parse(JSON.stringify(varPanier))
-      console.log(panierjson)
+      let panierjson = JSON.parse(JSON.stringify(varPanier));
+			localStorage.setItem('panier', JSON.stringify(panierjson));
     }
   }
 }

@@ -3,6 +3,7 @@ export class ApiReader {
     static SECRET_KEY = "consumer_secret=cs_45bc57883d05452f4bb658450a0e7d517ab1af0d";
     static BASE_URL = "https://unick-orn-lumag.go.yj.fr/index.php";
     static GET_ALL_PRODUCTS = "/wp-json/wc/v3/products";
+    static GET_URL_ORDER = "/wp-json/wc/v3/orders"
 }
 
 export class PostsApiReader {

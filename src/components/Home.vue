@@ -3,8 +3,16 @@
     <Loader v-bind:titre="titre"/>
   </div>
 	<div v-else id="home">
-		<section class="slider">
-			<img src="../assets/entreprise.jpg" alt="Ceci est une image">
+		<section class="swipers">
+			<slider animation="fade" height="400px" >
+				<slider-item >
+					<img src="../assets/microtracteur-dumper-lumag.jpg" alt="Ceci est une image" >
+				</slider-item>
+				<slider-item >
+					<img src="../assets/entreprise.jpg" alt="Ceci est une image" >
+				</slider-item>
+			</slider>
+			<!-- <img src="../assets/microtracteur-dumper-lumag.jpg" alt="Ceci est une image"> -->
 		</section>
 		<section class="intro">
 			<div class="intro-container">
@@ -296,7 +304,7 @@ li{
     position: relative;
     margin: auto;
     margin-bottom: 10px;
-    
+
   }
   .yellow-button:hover{
     position: relative;
